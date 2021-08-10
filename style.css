@@ -1,0 +1,123 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Georama', sans-serif;
+}
+body{
+    background-color: ghostwhite;
+}
+.heading{
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+}
+#search{
+    border: none;
+    border-bottom: 3px solid black;
+    font-size: 17px;
+    height: 7vh;
+    width: 50vw;
+    padding: 6px;
+    transition: border 0.15s ease-in-out;
+    background-color: ghostwhite;
+}
+#search::placeholder{
+    color: black;
+}
+#search:focus{
+    outline: none;
+    border: 3px solid black;
+    background-color: white;
+}
+#submit{
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 5px;
+    border: none;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    height: 35px;
+    width: 75px;
+    border: 3px solid black;
+    font-size: 15px;
+    transition: background 0.4s ease-in-out;
+}
+#submit:hover{
+    background-color: black;
+    cursor: pointer;
+    color: white;
+}
+.weather-cards{
+    margin: 35px;
+    padding: 10px;
+    display: grid;
+    grid-gap: 18px 30px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.city-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid black;
+    padding: 25px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.city-cards h1{
+    padding-top: 10px;
+}
+.city-cards img{
+    height: 95px;
+}
+.city-cards h4{
+    padding-bottom: 7px;
+    padding-top: -2px;
+    text-transform: capitalize;
+}
+@media screen and (max-width: 700px){
+    .search-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #search{
+        height: 6vh;
+    }
+    #submit{
+        width: 100px;
+        height: 30px;
+        margin: 10px;
+    }
+    .heading{
+        font-size: 20px;
+    }
+    .weather-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 1000px){ 
+    .weather-cards{
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 500px){ 
+    .weather-cards{
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .city-cards span{
+        font-size: 14px;
+    }
+}
